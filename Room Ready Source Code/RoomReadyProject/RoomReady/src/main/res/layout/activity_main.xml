@@ -1,0 +1,191 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".ActivityMain"
+    android:background="#dedede">
+
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayoutSeven"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:background="#ffffff">
+
+
+        <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/button_new_reservation"
+                android:src="@android:drawable/ic_menu_call"
+                android:background="#ffffff"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                />
+
+        <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/button_new_walk_in"
+                android:src="@android:drawable/ic_menu_myplaces"
+                android:background="#ffffff"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/button_new_reservation"/>
+
+        <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/button_view_totals"
+                android:src="@android:drawable/ic_menu_today"
+                android:background="#ffffff"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/button_new_walk_in"/>
+        <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/buttonSettingsMain"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:src="@android:drawable/ic_partial_secure"
+                android:background="#ffffff"
+                />
+        <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/buttonInfo"
+                android:background="#ffffff"
+                android:src="@android:drawable/ic_menu_info_details"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/buttonSettingsMain"/>
+
+        <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/buttonConceirge"
+                android:background="#ffffff"
+                android:src="@android:drawable/ic_menu_help"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/buttonInfo"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Guest Listing"
+                android:id="@+id/textView"
+                android:layout_below="@+id/buttonSettingsMain"
+                android:layout_alignRight="@+id/buttonSettingsMain"
+                android:textColor="@android:color/holo_blue_dark"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayoutEight"
+            android:layout_below="@+id/relLayoutSeven"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:background="@drawable/white_rounded_corners">
+
+        <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/buttonMicMain"
+                android:src="@android:drawable/ic_btn_speak_now"
+                android:background="#ffffff"
+                android:layout_alignTop="@+id/buttonSearchMain"
+                android:layout_toLeftOf="@+id/buttonFindReservation"
+                />
+
+        <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:id="@+id/spinnerMain"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@+id/buttonSearchMain"
+                android:clickable="true"
+                />
+
+        <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="Search"
+                android:id="@+id/buttonSearchMain"
+                android:typeface="serif"
+                android:src="@android:drawable/ic_menu_search"
+                android:background="#ffffff"
+                android:layout_alignTop="@+id/spinnerMain"
+                android:layout_toLeftOf="@+id/buttonMicMain"
+                />
+
+        <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/buttonFindReservation"
+                android:src="@android:drawable/ic_menu_agenda"
+                android:background="#ffffff"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayoutNine"
+            android:layout_below="@+id/relLayoutEight"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="3dp"
+            android:background="@drawable/white_rounded_corners">
+        <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/scrollViewFragmentReservation"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true">
+
+            <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/tableLayoutMain"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:stretchColumns="*"
+                    android:layout_alignParentLeft="true"
+                    android:background="#ffffff">
+            </TableLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

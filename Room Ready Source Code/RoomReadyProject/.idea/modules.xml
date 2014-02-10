@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/RoomReady/RoomReady.iml" filepath="$PROJECT_DIR$/RoomReady/RoomReady.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RoomReadyProject.iml" filepath="$PROJECT_DIR$/RoomReadyProject.iml" />
+    </modules>
+  </component>
+</project>
+

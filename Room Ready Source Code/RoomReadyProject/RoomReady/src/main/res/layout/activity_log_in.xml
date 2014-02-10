@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/relativeLayoutLogIn"
+                android:focusable="false">
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageLogInBackground"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hotel_two"/>
+
+    <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageRRlogo"
+            android:src="@drawable/room_ready_icon"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/white_rounded_corners"/>
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayoutLogInInfo"
+            android:layout_below="@+id/imageRRlogo"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/white_rounded_corners">
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_marginTop="0dp"
+                android:id="@+id/textLogInUser"
+                android:layout_centerHorizontal="true"
+                android:hint="User Name"/>
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/textLogInPassword"
+                android:hint="Password"
+                android:typeface="sans"
+                android:layout_centerVertical="true"
+                android:layout_below="@+id/textLogInUser"
+                android:layout_alignLeft="@+id/textLogInUser"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayoutLogInButtons"
+            android:layout_below="@+id/relLayoutLogInInfo"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/white_rounded_corners">
+        <Button
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:text="Cancel"
+                android:id="@+id/buttonLogInCancel"
+                android:background="@drawable/white_rounded_corners"
+                android:textColor="@android:color/holo_blue_dark"/>
+
+        <Button
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:text="Log In"
+                android:id="@+id/buttonLogIn"
+                android:background="@drawable/white_rounded_corners"
+                android:layout_toRightOf="@+id/buttonLogInCancel"
+                android:textColor="@android:color/holo_blue_dark"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

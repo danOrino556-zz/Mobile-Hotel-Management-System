@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/relOne"
+                tools:context=".ActivityInfo"
+                android:background="#dedede"
+                android:gravity="center_horizontal">
+
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="0dp"
+            android:id="@+id/relOne"
+            tools:context=".ActivityInfo"
+
+            android:background="@drawable/white_rounded_corners"
+            android:gravity="center_horizontal">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Where To?"
+                android:id="@+id/textDialogFirst"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="0dp"
+            android:id="@+id/relTwo"
+            android:layout_below="@+id/relOne"
+            tools:context=".ActivityInfo"
+            android:background="@drawable/white_rounded_corners"
+            android:gravity="center_horizontal">
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/textConDestination"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="0dp"
+                android:hint="Destination"
+                android:paddingLeft="5dp"
+                android:textColor="@android:color/secondary_text_light"
+                android:layout_toLeftOf="@+id/buttonConDestinationMic"/>
+
+        <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/buttonConDestinationMic"
+                android:layout_alignTop="@+id/textConDestination"
+                android:layout_alignParentRight="true"
+                android:src="@android:drawable/ic_btn_speak_now"
+                android:layout_marginRight="5dp"
+                android:background="#ffffff"/>
+
+
+
+    </RelativeLayout>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go!"
+            android:id="@+id/buttonConDirectionsGo"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_below="@+id/relTwo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/white_rounded_corners"/>
+
+</RelativeLayout>

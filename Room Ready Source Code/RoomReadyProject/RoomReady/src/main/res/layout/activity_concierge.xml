@@ -1,0 +1,191 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dedede"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="10dp"
+    tools:context=".ActivityConcierge">
+
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:id="@+id/relMenuBar"
+            tools:context=".ActivityInfo"
+            android:background="#ffffff">
+
+
+        <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/button_new_reservation"
+                android:src="@android:drawable/ic_menu_revert"
+                android:background="#ffffff"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"/>
+
+        <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/buttonSettingsMain"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:src="@android:drawable/ic_partial_secure"
+                android:background="#ffffff"/>
+
+        <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/buttonInfo"
+                android:layout_alignParentTop="true"
+                android:background="#ffffff"
+                android:src="@android:drawable/ic_menu_info_details"
+                android:layout_toLeftOf="@+id/buttonSettingsMain"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Virtual Concierge"
+                android:id="@+id/textView"
+                android:layout_below="@+id/buttonSettingsMain"
+                android:layout_alignRight="@+id/buttonSettingsMain"
+                android:textColor="@android:color/holo_blue_dark"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/relOne"
+            tools:context=".ActivityInfo"
+            android:layout_below="@+id/relMenuBar"
+            android:background="@drawable/white_rounded_corners"
+            android:gravity="center_horizontal">
+        <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:id="@+id/imageView"
+                android:src="@drawable/ic_menu_dialog"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="How May I Help You?"
+                android:id="@+id/textView"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignBottom="@+id/imageView"
+                android:layout_toLeftOf="@+id/imageView"/>
+    </RelativeLayout>
+
+    <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="vertical"
+            android:layout_below="@+id/relOne"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="#dedede">
+
+        <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/relOne"
+                tools:context=".ActivityInfo"
+                android:background="#dedede"
+                android:gravity="center_horizontal">
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weather"
+                    android:id="@+id/buttonConDirections"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/white_rounded_corners"
+                    android:textColor="@android:color/holo_blue_dark"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Restaurants"
+                    android:id="@+id/buttonConRestaurants"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/buttonConDirections"
+                    android:background="@drawable/white_rounded_corners"
+                    android:textColor="@android:color/holo_blue_dark"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Theaters"
+                    android:id="@+id/buttonConTheaters"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_below="@+id/buttonConRestaurants"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/white_rounded_corners"
+                    android:textColor="@android:color/holo_blue_dark"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Local Entertainment"
+                    android:id="@+id/buttonConLocalEntertainment"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_below="@+id/buttonConTheaters"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/white_rounded_corners"
+                    android:textColor="@android:color/holo_blue_dark"/>
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Local Map"
+                    android:id="@+id/buttonConLocalMap"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_below="@+id/buttonConLocalEntertainment"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/white_rounded_corners"
+                    android:textColor="@android:color/holo_blue_dark"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+

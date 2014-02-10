@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_marginBottom="10dp"
+    android:background="#dedede"
+    tools:context=".TabPayment">
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayoutSeven"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/white_rounded_corners">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/textView3"
+                android:layout_above="@+id/spinnerExpMonths"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView"
+                android:background="@drawable/abc_ab_bottom_transparent_light_holo"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Payment Type :"
+                android:id="@+id/textView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"/>
+
+        <Spinner
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:id="@+id/spinnerPaymentTypesFrag"
+                android:layout_alignTop="@+id/textView"
+                android:prompt = "@string/payment_type"
+                android:dropDownVerticalOffset="30dp"
+                android:spinnerMode = "dialog"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/textView"/>
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editTextCCNumberFrag"
+                android:layout_below="@+id/textView"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:hint="CC Number"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
+                android:textColor="@android:color/secondary_text_light"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Expiration :"
+                android:id="@+id/textExpiration"
+                android:layout_below="@+id/editTextCCNumberFrag"
+                android:phoneNumber="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/abc_ab_bottom_transparent_light_holo"/>
+
+        <Spinner
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:id="@+id/spinnerExpYears"
+                android:layout_alignTop="@+id/textExpiration"
+                android:prompt = "@string/years"
+                android:dropDownVerticalOffset="30dp"
+                android:spinnerMode = "dialog"
+                android:layout_alignRight="@+id/editTextCCNumberFrag"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="/"
+                android:id="@+id/textView2"
+                android:layout_alignTop="@+id/spinnerExpYears"
+                android:layout_toLeftOf="@+id/spinnerExpYears"
+                android:gravity="center_vertical"/>
+
+        <Spinner
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:id="@+id/spinnerExpMonths"
+                android:prompt = "@string/months"
+                android:dropDownVerticalOffset="30dp"
+                android:spinnerMode = "dialog"
+                android:layout_alignTop="@+id/textView2"
+                android:gravity="center_horizontal"
+                android:layout_toLeftOf="@+id/textView2"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayoutEight"
+            android:layout_below="@+id/relLayoutSeven"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/white_rounded_corners">
+        <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollViewFragmentReservation"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="#dedede">
+
+            <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/editTextCCExpirationFrag"
+                    android:id ="@+id/paymentTable"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="0dp"
+                    android:stretchColumns="*"
+                    android:layout_alignParentLeft="true"
+                    android:background="#ffffff">
+            </TableLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

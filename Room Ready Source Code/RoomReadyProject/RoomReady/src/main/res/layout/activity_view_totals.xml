@@ -1,0 +1,351 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context=".ActivityMain"
+                android:background="#dedede">
+
+
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:id="@+id/relOne"
+            tools:context=".ActivityInfo"
+            android:background="#ffffff">
+
+
+        <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/button_new_reservation"
+                android:src="@android:drawable/ic_menu_revert"
+                android:background="#ffffff"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"/>
+
+        <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/buttonSettingsMain"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:src="@android:drawable/ic_partial_secure"
+                android:background="#ffffff"/>
+
+        <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/buttonInfo"
+                android:layout_alignParentTop="true"
+                android:background="#ffffff"
+                android:src="@android:drawable/ic_menu_info_details"
+                android:layout_toLeftOf="@+id/buttonSettingsMain"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Daily Totals"
+                android:id="@+id/textView"
+                android:layout_below="@+id/buttonSettingsMain"
+                android:layout_alignRight="@+id/buttonSettingsMain"
+                android:textColor="@android:color/holo_blue_dark"/>
+    </RelativeLayout>
+
+    <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollViewFragmentReservation"
+            android:layout_below="@+id/relOne"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true">
+
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/relLayoutThreeFrag"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:background="#dedede"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true">
+
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/relLayoutFive"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/white_rounded_corners">
+                <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0 "
+                        android:id="@+id/textNumArrivalsTotals"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="5dp"
+                        android:background="#ffffff"
+                        android:gravity="center_vertical|center_horizontal"/>
+
+                <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0"
+                        android:id="@+id/textNumDeparturesTotals"
+                        android:layout_below="@+id/textNumArrivalsTotals"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#ffffff"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_alignLeft="@+id/textNumArrivalsTotals"/>
+
+                <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0"
+                        android:id="@+id/textRoomsRemainingTotals"
+                        android:layout_below="@+id/textNumDeparturesTotals"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#ffffff"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_alignLeft="@+id/textNumDeparturesTotals"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Arrivals"
+                        android:id="@+id/textView2"
+                        android:layout_marginLeft="20dp"
+                        android:layout_alignTop="@+id/textNumArrivalsTotals"
+                        android:layout_alignBottom="@+id/textNumArrivalsTotals"
+                        android:gravity="center_vertical"
+                        android:layout_toRightOf="@+id/imageView"
+                        android:layout_alignParentRight="true"/>
+
+                <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/imageView"
+                        android:layout_alignTop="@+id/textView2"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/room_ready_icon"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Departures"
+                        android:id="@+id/textView3"
+                        android:layout_alignTop="@+id/textNumDeparturesTotals"
+                        android:gravity="center_vertical"
+                        android:layout_alignLeft="@+id/textView2"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/abc_ab_bottom_transparent_light_holo"/>
+
+                <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/imageView2"
+                        android:layout_alignTop="@+id/textView3"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/room_ready_icon"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Rooms Remaining"
+                        android:id="@+id/textView4"
+                        android:layout_alignTop="@+id/textRoomsRemainingTotals"
+                        android:gravity="center_vertical"
+                        android:layout_alignLeft="@+id/textView3"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/abc_ab_bottom_transparent_light_holo"/>
+
+                <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/imageView3"
+                        android:layout_alignTop="@+id/textView4"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/room_ready_icon"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/relLayoutSix"
+                    android:layout_below="@+id/relLayoutFive"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/white_rounded_corners">
+                <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0"
+                        android:id="@+id/textDoubleBedsTotals"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:background="#ffffff"
+                        android:gravity="center_vertical|center_horizontal"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0"
+                        android:id="@+id/textKingsTotals"
+                        android:layout_below="@+id/textDoubleBedsTotals"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="5dp"
+                        android:background="#ffffff"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_alignLeft="@+id/textDoubleBedsTotals"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0"
+                        android:id="@+id/textKingCouchTotals"
+                        android:layout_below="@+id/textKingsTotals"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="5dp"
+                        android:background="#ffffff"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_alignLeft="@+id/textKingsTotals"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0"
+                        android:id="@+id/textKingWhirlpoolTotals"
+                        android:layout_below="@+id/textKingCouchTotals"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="5dp"
+                        android:background="#ffffff"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_alignLeft="@+id/textKingCouchTotals"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0"
+                        android:id="@+id/textKingHandicappedTotals"
+                        android:layout_below="@+id/textKingWhirlpoolTotals"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="5dp"
+                        android:background="#ffffff"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_alignLeft="@+id/textKingCouchTotals"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Double Beds"
+                        android:id="@+id/textView5"
+                        android:layout_alignTop="@+id/textDoubleBedsTotals"
+                        android:layout_alignBottom="@+id/textDoubleBedsTotals"
+                        android:layout_marginLeft="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentRight="true"
+                        />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Kings"
+                        android:id="@+id/textView6"
+                        android:layout_alignBottom="@+id/textKingsTotals"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/textKingsTotals"
+                        android:background="@drawable/abc_ab_bottom_transparent_light_holo"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="King w/Couch"
+                        android:id="@+id/textView7"
+                        android:layout_alignTop="@+id/textKingCouchTotals"
+                        android:layout_alignBottom="@+id/textKingCouchTotals"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/abc_ab_bottom_transparent_light_holo"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="King w/Whirlpool"
+                        android:id="@+id/textView8"
+                        android:layout_alignTop="@+id/textKingWhirlpoolTotals"
+                        android:layout_alignBottom="@+id/textKingWhirlpoolTotals"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/abc_ab_bottom_transparent_light_holo"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="King Handicapped"
+                        android:id="@+id/textView9"
+                        android:layout_alignTop="@+id/textKingHandicappedTotals"
+                        android:layout_alignBottom="@+id/textKingHandicappedTotals"
+                        android:layout_toLeftOf="@+id/textKingHandicappedTotals"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/abc_ab_bottom_transparent_light_holo"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

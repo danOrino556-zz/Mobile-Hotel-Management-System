@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Room Ready</string>
+    <string name="action_settings">Settings</string>
+    <string name="num_cribs">Cribs Requested</string>
+    <string name="num_rollaways">Rollaways Requested</string>
+    <string name="num_adults">Number of Adults</string>
+    <string name="room_types">Select Room Type</string>
+    <string name="rate_type">Select Rate Type</string>
+    <string name="payment_type">Select Payment Type</string>
+    <string name="room_number">Select a Room Number</string>
+    <string name="states">Select a State</string>
+    <string name="years">Expiration Year</string>
+    <string name="months">Expiration Month</string>
+    <string name="search_by">Search By</string>
+    <string name="title_activity_activity_splash_two">ActivitySplashTwo</string>
+    <string name="title_activity_activity_main">ActivityMain</string>
+    <string name="title_activity_activity_new_reservation">ActivityNewReservation</string>
+    <string name="title_activity_activity_new_walk_in">ActivityNewWalkIn</string>
+    <string name="title_activity_activity_view_totals">ActivityViewTotals</string>
+    <string name="title_activity_activity_folio_lookup">ActivityFolioLookup</string>
+    <string name="title_activity_activity_help">ActivityHelp</string>
+    <string name="title_activity_activity_settings">ActivitySettings</string>
+    <string name="title_activity_activity_reports">ActivityReports</string>
+    <string name="title_activity_activity_info">ActivityInfo</string>
+    <string name="title_activity_activity_log_in">ActivityLogIn</string>
+    <string name="title_activity_activity_find_folio">ActivityFindFolio</string>
+    <string name="title_activity_activity_web_view">ActivityWebView</string>
+    <string name="title_activity_tab_personal">TabPersonal</string>
+    <string name="title_activity_tab_dates">TabDates</string>
+    <string name="title_activity_tab_payment">TabPayment</string>
+    <string name="title_activity_activity_concierge">ActivityConcierge</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>

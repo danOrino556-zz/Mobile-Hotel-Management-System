@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context=".ActivityMain"
+                android:background="#dedede">
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayoutSeven"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:background="#ffffff">
+
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/button_new_reservation"
+            android:src="@android:drawable/ic_menu_revert"
+            android:background="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"/>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/button_new_walk_in"
+            android:src="@android:drawable/ic_menu_set_as"
+            android:background="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/button_new_reservation"/>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/button_view_totals"
+            android:src="@android:drawable/ic_menu_delete"
+            android:background="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/button_new_walk_in"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/buttonSettingsMain"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:src="@android:drawable/ic_partial_secure"
+            android:background="#ffffff"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/buttonInfo"
+            android:layout_alignParentTop="true"
+            android:background="#ffffff"
+            android:src="@android:drawable/ic_menu_info_details"
+            android:layout_toLeftOf="@+id/buttonSettingsMain"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Folio Information"
+                android:id="@+id/textGuestStatus"
+                android:layout_below="@+id/buttonSettingsMain"
+                android:layout_alignRight="@+id/buttonSettingsMain"
+                android:textColor="@android:color/holo_blue_dark"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relLayoutSeven"
+            android:id="@+id/relTwo"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            tools:context=".ActivityInfo"
+            android:background="#dedede">
+
+        <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/imagePersonalTab"
+                android:src="@drawable/ic_action_add_person"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"/>
+
+        <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/imagePaymentTab"
+                android:src="@drawable/ic_action_new_label"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/imageDatesTab"/>
+
+        <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/imageDatesTab"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_action_go_to_today"
+                android:layout_alignTop="@+id/imagePersonalTab"
+                android:layout_toRightOf="@+id/imagePersonalTab"/>
+
+        <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/imageReservationExecute"
+                android:src="@drawable/ic_action_forward"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"/>
+
+        <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/imageReservationSave"
+                android:src="@drawable/ic_action_accept"
+                android:layout_alignTop="@+id/imageReservationExecute"
+                android:layout_toLeftOf="@+id/imageReservationExecute"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollViewFragmentReservation"
+            android:layout_below="@+id/relTwo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true">
+
+        <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/relLayoutThreeFrag"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#ffffff"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true">
+
+        </FrameLayout>
+
+     </ScrollView>
+
+</RelativeLayout>
+
